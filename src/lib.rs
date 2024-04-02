@@ -4,7 +4,7 @@ use once_cell::sync::Lazy;
 
 
 static FISH_HASH_CONTEXT: Lazy<Mutex<fish_hash::Context>> = Lazy::new(|| {
-    let  context = fish_hash::Context::new(false);
+    let  context = fish_hash::Context::new(false, None);
     Mutex::new(context)
 });
 
